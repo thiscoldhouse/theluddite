@@ -39,9 +39,13 @@
       margin: auto;
   }
 
+  .posts-container{
+      text-align: center;
+  }
+
 </style>
 
-<div class="projects-container">
+<div class="posts-container">
   <% for (let i=0; i < state.posts.length; i++){ %>
   <div class="post-container">
     <a href="#!post?id=<%- state.posts[state.posts.length - i - 1].id -%>">
