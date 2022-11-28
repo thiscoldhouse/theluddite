@@ -1,0 +1,51 @@
+<script>
+  function injectPost(){
+    let post_id = getQueryStringParam('id');
+    $.get('/posts/' + post_id + '.html').then(function(data){
+      for (let i=0; i < state.posts.length; i++){
+        if (state.posts[i].id == post_id){
+          $("#article-headline").text(state.posts[i].title);
+          break;
+        }
+      }
+
+      $("#article-image").attr('src', '/img/' + post_id + '.png');
+      $("#article-body").html(data);
+    });
+  }
+
+  $(document).ready(function(){
+    injectPost();
+  });
+</script>
+<style>
+  #article-headline{
+      font-size: 35;
+      font-weight: bold;
+      width: 60%;
+      display: block;
+      margin: 20px auto auto auto;
+      text-align: center;
+  }
+  #article-body{
+      font-size: 18px;
+      width: 75%;
+      text-align: justify;
+      display: block;
+      margin: auto;
+  }
+  #article-image{
+      width: 60%;
+      max-width: 400px;
+      height: scale;
+      display: block;
+      margin: 20px auto 20px auto;
+  }
+</style>
+<div id="article-headline">
+</div>
+<img id="article-image">
+<div id="article-body">
+</div>
+<br><br><br><br>
+<br><br><br><br>

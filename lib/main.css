@@ -1,0 +1,98 @@
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* ~~~~~~~~~ TOP OF PAGE ~~~~~~~~~` */
+
+.divider{
+    width: 80%;
+    display: block;
+    margin: auto;
+    height: 1px;
+    border: none;
+    background-color: white;
+}
+.header{
+    background-color: black;
+    color: white;
+    padding: 20px
+}
+
+.header a{
+    text-decoration: none;
+    color: white;
+}
+
+.main-title {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+.main-title h1{
+    font-size: 50px;
+    font-weight: normal;
+}
+.main-title h3{
+    font-size: 16px;
+    font-weight: normal;
+    padding-bottom: 10px;
+}
+
+/* ~~~~~~~~~ NAVBAR ~~~~~~~~~` */
+.navbar div{
+    width: 100%;
+}
+
+.nav-image-container {
+    width:100%;
+    overflow: hidden;
+}
+.navbar ul{
+    width:100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 20px 0 0 0;
+    overflow: hidden;
+}
+
+.navbar h2{
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+
+}
+
+.navbar li {
+    width: auto;
+    float: left;
+}
+
+.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.navbar li a:hover {
+    background-color: #111111;
+}
+
+.navbar-container{
+    top: 2px;
+}
+
+.navbar hr{
+    border:         none;
+    border-left:    1px solid hsla(200, 10%, 50%,100);
+    height:         44px;
+    width:          1px;
+}

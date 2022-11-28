@@ -1,0 +1,80 @@
+<style>
+  .post-container {
+      vertical-align: top;
+      text-align: center;
+      display: inline-block;
+      margin: auto;
+      height: auto;
+      width: 400px;
+      max-width: 90%;
+  }
+
+  .post-container a, figure {
+      text-align: center;
+      text-decoration: none;
+      color: black;
+  }
+
+  .post-container figcaption {
+      margin: 10px 0 0 0;
+      font-weight: bold;
+  }
+
+  .post-container img {
+      transition: transform 0.2s;
+      -webkit-transition: -webkit-transform 0.2s;
+      -moz-transition: -moz-transform 0.2s;
+      -o-transition: -o-transform 0.2s;
+      border-radius: 5px;
+      border: 1px #1B272A solid;
+      /* max-width: 200px; */
+      height: 300px;
+      width: 300px;
+      object-fit: cover;
+      border-radius: 56px;
+  }
+
+  .centered{
+      display: block;
+      margin: auto;
+  }
+
+</style>
+
+<div class="projects-container">
+  <% for (let i=0; i < state.posts.length; i++){ %>
+  <div class="post-container">
+    <a href="#!post?id=<%- state.posts[state.posts.length - i - 1].id -%>">
+      <figure>
+        <img src="/img/<%- state.posts[state.posts.length - i - 1].id -%>.png">
+        <figcaption>
+          <%- state.posts[state.posts.length - i - 1].title -%>
+        </figcaption>
+      </figure>
+    </a>
+  </div>
+  <% } %>
+</div>
+<!-- <style> -->
+  <!--   #latest-entry{ -->
+  <!--       width: 80%; -->
+  <!--       display: flex; -->
+  <!--       align-items: center; -->
+  <!--       justify-content: space-evenly; -->
+  <!--       padding: 50px; -->
+  <!--   } -->
+
+  <!--   #latest-entry-text{ -->
+  <!--       padding: 10px; -->
+  <!--   } -->
+
+  <!--   #latest-entry h2{ -->
+  <!--       font-size: 30px; -->
+  <!--       font-weight: normal; -->
+  <!--   } -->
+
+  <!--   #latest-entry img{ -->
+  <!--       max-width: 50%; -->
+  <!--       height: fit-content; -->
+  <!--   } -->
+  <!-- </style> -->
