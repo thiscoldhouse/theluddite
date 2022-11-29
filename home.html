@@ -48,7 +48,8 @@
 </style>
 
 <div class="posts-container">
-  <% for (let i=0; i < state.posts.length; i++){ %>
+  <% for (let i=0; i < state.posts.length; i++){
+      if (state.posts[state.posts.length - i - 1].publish) { %>
   <div class="post-container">
     <a href="#!post?id=<%- state.posts[state.posts.length - i - 1].id -%>">
       <figure>
@@ -59,7 +60,7 @@
       </figure>
     </a>
   </div>
-  <% } %>
+  <% }} %>
 </div>
 <!-- <style> -->
   <!--   #latest-entry{ -->
