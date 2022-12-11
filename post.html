@@ -1,6 +1,12 @@
 <script>
   function injectPost(){
-    let post_id = getQueryStringParam('id');
+    var post_id = window.location.hash.substring(1);
+    post_id = post_id.split('/')[1];
+
+    if (!post_id){
+      // backwards compatibility with query string navigation
+      post_id = getQueryStringParam('id');
+    }
     $.get('/posts/' + post_id + '.html').then(function(data){
       for (let i=0; i < state.posts.length; i++){
         if (state.posts[i].id == post_id){
@@ -41,6 +47,7 @@
 </div>
 <img id="article-image">
 <div id="article-body" class="article">
+  Sorry, that post doesn't exist.
 </div>
 <br><br><br><br>
 <br><br><br><br>

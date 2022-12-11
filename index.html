@@ -73,6 +73,8 @@
       function locationHasChanged(){
         var newPage = window.location.hash.substring(1);
         newPage = newPage.split('?')[0];  //removes query string
+        newPage = newPage.split('/')[0]; // only care about top level URL here
+        debugger;
         if (!newPage){
           newPage = "home"
         }

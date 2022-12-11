@@ -50,7 +50,7 @@
   <% for (let i=0; i < state.posts.length; i++){
       if (state.posts[state.posts.length - i - 1].publish) { %>
   <div class="post-container">
-    <a href="#!post?id=<%- state.posts[state.posts.length - i - 1].id -%>">
+    <a href="#!post/<%- state.posts[state.posts.length - i - 1].id -%>">
       <figure>
         <img src="/img/<%- state.posts[state.posts.length - i - 1].id -%>.png">
         <figcaption>
