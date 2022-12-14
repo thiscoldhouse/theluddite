@@ -11,6 +11,7 @@
       for (let i=0; i < state.posts.length; i++){
         if (state.posts[i].id == post_id){
           $("#article-headline").text(state.posts[i].title);
+          $('title').html(state.posts[i].title);
           break;
         }
       }
